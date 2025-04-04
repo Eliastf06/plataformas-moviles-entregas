@@ -1,1 +1,84 @@
+/* 1 */
+h1 {
+
+    text-align: center;
+
+}
+
+
+
+/* 2 */
+p {
+
+    font-family: serif;
+
+}
+
+
+
+/* 3 */
+#primer-parrafo {
+
+    background-color: #CEE;
+
+}
+
+
+
+/* 4 */
+#primer-parrafo em {
+
+    color: #933;
+
+}
+
+
+
+/* 5 */
+a {
+
+    outline: 1px solid #333;
+
+}
+
+
+
+/* 6 */
+p.fuente {
+
+    opacity: 100%;
+
+}
+
+
+
+/* 7 */
+
+p:not([id]) {
+
+    text-shadow: none;
+
+}
+
+
+
+/* 8 */
+
+p.fuente {
+
+    color: #000;
+
+}
+
+
+
+/* 9 */
+
+.complicado {
+
+    font-weight: bold;
+
+    color: #C62;
+
+}
 
