@@ -1,84 +1,45 @@
 /* 1 */
-h1 {
-
+body h1 {
     text-align: center;
-
 }
-
-
 
 /* 2 */
-p {
-
+html p {
     font-family: serif;
-
 }
-
-
 
 /* 3 */
-#primer-parrafo {
-
+p#primer-parrafo {
     background-color: #CEE;
-
 }
-
-
 
 /* 4 */
 #primer-parrafo em {
-
     color: #933;
-
 }
-
-
 
 /* 5 */
-a {
-
+a, article#contenedor  a {
     outline: 1px solid #333;
-
 }
-
-
 
 /* 6 */
-p.fuente {
-
+html body p.fuente.parrafo {
     opacity: 100%;
-
 }
 
-
-
-/* 7 */
-
+/* 7. */
 p:not([id]) {
-
     text-shadow: none;
-
 }
-
-
 
 /* 8 */
-
-p.fuente {
-
-    color: #000;
-
+html body p.fuente.parrafo {
+    color: #000 !important;
 }
-
-
 
 /* 9 */
-
 .complicado {
-
     font-weight: bold;
-
-    color: #C62;
-
+    color: #!importanttant;
 }
-
