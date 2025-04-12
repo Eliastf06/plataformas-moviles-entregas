@@ -22,7 +22,7 @@
 /* 4 */
 @media (min-height: 200px) {
     html h1 {
-        background-color: red;
+        background-color: lime;
     }
 }
 
