@@ -1,41 +1,41 @@
 /* 1 */
 @media (min-width: 401px) {
-    html body {
+    body {
         background-color: rgb(40, 60, 80);
     }
 }
 
 /* 2 */
 @media (max-width: 799px) {
-    html h1 {
+    h1 {
         text-align: center;
     }
 }
 
 /* 3 */
 @media (orientation: landscape) {
-    html article {
+    article {
         max-width: 50ch;
     }
 }
 
 /* 4 */
 @media (min-height: 200px) {
-    html h1 {
+    h1 {
         background-color: #334;
     }
 }
 
 /* 5 */
 @media print {
-    html p {
+    p {
         font-family: serif;
     }
 }
 
 /* 6 */
 @media (prefers-color-scheme: light) {
-    html body, html h1 {
+    body, h1 {
         background-color: #DDD;
         color: #111;
     }
@@ -43,7 +43,7 @@
 
 /* 7 */
 @media (hover: none) and (pointer: coarse) {
-    html a {
+    a {
         background-color: #212;
         padding: 2px 5px;
     }
@@ -51,14 +51,14 @@
 
 /* 8 */
 @media (min-width: 800px) and (max-width: 899px) {
-    html img {
+    img {
         display: none;
     }
 }
 
 /* 9 */
 @media (min-width: 200px) and (max-width: 400px) {
-    html img {
+    img {
         height: 400px;
         object-fit: cover;
     }
@@ -66,7 +66,7 @@
 
 /* 10 */
 @media (resolution > 2dppx) {
-    html article {
+    article {
         background-color: #667;
     }
 }
