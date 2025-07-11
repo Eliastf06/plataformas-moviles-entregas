@@ -10,10 +10,9 @@
             background-color: #28a745 !important;
             border-color: #28a745 !important;
         }
-        /* Asegúrate de que el textarea herede los estilos de tamaño y fuente */
         #editorTexto {
-            font-family: sans-serif; /* O la fuente que desees */
-            transition: font-size 0.1s ease-in-out; /* Transición suave para el cambio de tamaño */
+            font-family: sans-serif; 
+            transition: font-size 0.1s ease-in-out; 
         }
     </style>
 </head>
@@ -56,7 +55,7 @@
 
                 <h2>Editar Texto</h2>
                 <div class="my-3">
-                    <textarea id="editorTexto" class="form-control" rows="5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum auctor libero, vel imperdiet est. Etiam blandit facilisis ex, nec cursus metus pharetra quis. Fusce imperdiet nisl nibh, ac aliquet ante elementum vitae.</textarea>
+                    <textarea id="editorTexto" class="form-control" rows="5"></textarea>
                 </div>
 
                 <hr class="hr">
@@ -72,47 +71,37 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        // const textoElement = document.getElementById('texto'); // Ya no necesitamos manipular este párrafo directamente para los estilos
-        const editorTexto = document.getElementById('editorTexto');
+        const textoElement = document.getElementById('texto'); 
+        const editorTexto = document.getElementById('editorTexto'); 
         const rangoTamañoTexto = document.getElementById('rangoTamañoTexto');
         const valorTamañoTexto = document.getElementById('valorTamañoTexto');
 
-        // Sincronizar el tamaño inicial del textarea con el valor del rango
+        
+        editorTexto.value = textoElement.textContent;
+        
         editorTexto.style.fontSize = rangoTamañoTexto.value + 'px';
 
-        /**
-         * funcionNegrita()
-         * Esta función se ejecuta cuando el usuario selecciona la opción Bold (negrita).
-         */
         function funcionNegrita() {
-            editorTexto.classList.toggle('fw-bold');
+            textoElement.classList.toggle('fw-bold'); 
             document.getElementById('btn-negrita').classList.toggle('active-style');
         }
 
-        /**
-         * funcionCursiva()
-         * Esta función se ejecuta cuando el usuario selecciona la opción Italic (cursiva).
-         */
         function funcionCursiva() {
-            editorTexto.classList.toggle('fst-italic');
+            textoElement.classList.toggle('fst-italic'); 
             document.getElementById('btn-cursiva').classList.toggle('active-style');
         }
-
-        /**
-         * funcionSubrayado()
-         * Esta función se ejecuta cuando el usuario selecciona la opción Underline (subrayado).
-         */
+        
         function funcionSubrayado() {
-            editorTexto.classList.toggle('text-decoration-underline');
+            textoElement.classList.toggle('text-decoration-underline'); 
             document.getElementById('btn-subrayado').classList.toggle('active-style');
         }
 
         function funcionCambiarColor() {
-            if (editorTexto.style.color === 'red') {
-                editorTexto.style.color = '';
+            if (textoElement.style.color === 'red') {
+                textoElement.style.color = ''; 
                 document.getElementById('btn-color').classList.remove('active-style');
             } else {
-                editorTexto.style.color = 'red';
+                textoElement.style.color = 'red';
                 document.getElementById('btn-color').classList.add('active-style');
             }
         }
@@ -135,17 +124,19 @@
             }
         }
 
-        // El textarea ya es editable por defecto, así que no necesitamos un listener para su contenido
-        // editorTexto.addEventListener('input', () => {
-        //     textoElement.textContent = editorTexto.value;
-        // });
-
-        rangoTamañoTexto.addEventListener('input', () => {
-            const nuevoTamaño = rangoTamañoTexto.value;
-            editorTexto.style.fontSize = nuevoTamaño + 'px'; // Aplica el tamaño al textarea
-            valorTamañoTexto.textContent = nuevoTamaño; // Actualiza el número en el span
+        
+        editorTexto.addEventListener('input', () => {
+            textoElement.textContent = editorTexto.value;
         });
 
+        
+        rangoTamañoTexto.addEventListener('input', () => {
+            const nuevoTamaño = rangoTamañoTexto.value;
+            editorTexto.style.fontSize = nuevoTamaño + 'px';
+            valorTamañoTexto.textContent = nuevoTamaño; 
+        });
+
+        
         document.querySelectorAll('button.btn').forEach(e => e.addEventListener('click', handlerBoton));
     </script>
 </body>
