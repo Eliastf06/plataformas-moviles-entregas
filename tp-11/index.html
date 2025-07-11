@@ -136,8 +136,8 @@
 
         rangoTamañoTexto.addEventListener('input', () => {
             const nuevoTamaño = rangoTamañoTexto.value;
-            textoElement.style.fontSize = nuevoTamaño + 'px';
-            valorTamañoTexto.textContent = nuevoTamaño;
+            textoElement.style.fontSize = nuevoTamaño + 'px'; // Esto cambia el tamaño del párrafo principal
+            valorTamañoTexto.textContent = nuevoTamaño; // Esto actualiza el número en el span
         });
 
         document.querySelectorAll('button.btn').forEach(e => e.addEventListener('click', handlerBoton));
