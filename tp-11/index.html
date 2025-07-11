@@ -58,8 +58,8 @@
 
                 <h2>Tamaño del Texto</h2>
                 <div class="my-3">
+                    <p id="parrafo-tamaño-actual">Tamaño actual: <span id="valorTamañoTexto">16</span>px</p>
                     <input type="range" class="form-range" id="rangoTamañoTexto" min="12" max="48" value="16">
-                    <p>Tamaño actual: <span id="valorTamañoTexto">16</span>px</p>
                 </div>
             </div>
         </div>
@@ -71,9 +71,11 @@
         const editorTexto = document.getElementById('editorTexto');
         const rangoTamañoTexto = document.getElementById('rangoTamañoTexto');
         const valorTamañoTexto = document.getElementById('valorTamañoTexto');
+        const parrafoTamañoActual = document.getElementById('parrafo-tamaño-actual'); // Nuevo elemento
 
         editorTexto.value = textoElement.textContent;
-        textoElement.style.fontSize = rangoTamañoTexto.value + 'px';
+        // Aplicar el tamaño inicial al párrafo del tamaño actual
+        parrafoTamañoActual.style.fontSize = rangoTamañoTexto.value + 'px';
 
         /**
          * funcionNegrita()
@@ -136,7 +138,7 @@
 
         rangoTamañoTexto.addEventListener('input', () => {
             const nuevoTamaño = rangoTamañoTexto.value;
-            textoElement.style.fontSize = nuevoTamaño + 'px'; // Esto cambia el tamaño del párrafo principal
+            parrafoTamañoActual.style.fontSize = nuevoTamaño + 'px'; // Esto cambia el tamaño del párrafo del tamaño actual
             valorTamañoTexto.textContent = nuevoTamaño; // Esto actualiza el número en el span
         });
 
